@@ -1,37 +1,70 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
     font-family: Arial;
-    padding: 20px;
 }
 
-/* Botón */
-button{
-    padding: 10px 15px;
-    border: none;
-    background: #2563eb;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
+header{
+    background:#2563eb;
+    color:white;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-/* Lista */
-ul{
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
-    background: #f4f6f9;
-    width: 150px;
-    border-radius: 5px;
+/* Menú normal escritorio */
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
 }
 
-li{
-    padding: 10px;
+nav a{
+    color:white;
+    text-decoration:none;
 }
 
-li:hover{
-    background: #ddd;
+/* Botón hamburguesa oculto en escritorio */
+.hamburguesa{
+    display:none;
+    font-size:24px;
+    background:none;
+    border:none;
+    color:white;
+    cursor:pointer;
 }
 
-/* Clase para ocultar */
-.oculto{
-    display: none;
+/* ===== RESPONSIVE ===== */
+@media (max-width:768px){
+
+    nav{
+        position:absolute;
+        top:60px;
+        left:0;
+        width:100%;
+        background:#1e40af;
+        display:none;
+    }
+
+    nav ul{
+        flex-direction:column;
+        padding:10px;
+    }
+
+    nav ul li{
+        padding:10px 0;
+    }
+
+    .hamburguesa{
+        display:block;
+    }
+
+    nav.mostrar{
+        display:block;
+    }
 }

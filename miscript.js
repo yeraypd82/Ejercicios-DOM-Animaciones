@@ -1,10 +1,10 @@
 window.onload = function(){
 
     let boton = document.getElementById("btnMenu");
-    let lista = document.getElementById("listaMenu");
+    let menu = document.getElementById("menu");
 
     boton.addEventListener("click", function(){
-        lista.classList.toggle("oculto");
+        menu.classList.toggle("mostrar");
     });
 
 };
