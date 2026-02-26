@@ -1,10 +1,9 @@
 window.onload = function(){
+    let contador = 0;
+    const btn = document.getElementById('contadorBtn');
 
-    let boton = document.getElementById("btnMenu");
-    let menu = document.getElementById("menu");
-
-    boton.addEventListener("click", function(){
-        menu.classList.toggle("mostrar");
+    btn.addEventListener('click', () => {
+        contador++;
+        btn.textContent = "Clicks: " + contador;
     });
-
-};
+}
