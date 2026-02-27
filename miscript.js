@@ -1,19 +1,15 @@
 window.onload = function(){
 
-    const destino = document.getElementById('destino');
-    const botonRojo = document.getElementById('rojo');
-    const botonAzul = document.getElementById('azul');
-    const botonReset = document.getElementById('reset');
+    const botonCopiar = document.getElementById('copiar');
+    botonCopiar.addEventListener('click', fCopiar);
+}
 
-    botonRojo.addEventListener('click', function(){
-        destino.style.backgroundColor = 'red';
-    });
+function fCopiar() {
 
-    botonAzul.addEventListener('click', function(){
-        destino.style.backgroundColor = 'blue';
-    });
+    let textoParaCopiar =
+        document.querySelector(".texto").textContent;
 
-    botonReset.addEventListener('click', function(){
-        destino.style.backgroundColor = '';
-    });
+    let destino = document.querySelector("p");
+
+    destino.textContent = textoParaCopiar;
 }
