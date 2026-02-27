@@ -1,9 +1,18 @@
 window.onload = function(){
-    let contador = 0;
-    const btn = document.getElementById('contadorBtn');
+    cargarImagen();
+}
 
-    btn.addEventListener('click', () => {
-        contador++;
-        btn.textContent = "Clicks: " + contador;
-    });
+function cargarImagen(){
+
+    let destino = document.getElementById("imagen");
+
+    if (!destino){
+        alert("No existe el bloque destino");
+    } else {
+        let nodoImg = document.createElement("img");
+        nodoImg.setAttribute("src", "img/programa.jpg");
+        nodoImg.setAttribute("width", "200");
+
+        destino.appendChild(nodoImg);
+    }
 }
