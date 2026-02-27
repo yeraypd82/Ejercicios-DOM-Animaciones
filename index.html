@@ -2,21 +2,22 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Elementos por Name</title>
+    <title>Seleccionar por Clases</title>
     <script src="js/miscript.js"></script>
 </head>
 <body>
 
-    <form id="formulario">
+    <ul id="flores">
+        <li class="item">Cultivo de rosales</li>
+        <li class="item">Cultivo de claveles</li>
+        <li class="item">Cultivo de orquideas</li>
+    </ul>
 
-        <input type="radio" name="menu" value="Verdura"> Verduras
-        <input type="radio" name="menu" value="Pescado"> Pescado
-        <input type="radio" name="menu" value="Carne"> Carne
+    <button id="btn">Leer</button>
 
-        <br><br>
-        <button id="enviar">Elegir</button>
-
-    </form>
+    <div>Lista de flores:</div>
+    <br>
+    <div id="resultado"></div>
 
 </body>
 </html>

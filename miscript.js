@@ -1,19 +1,27 @@
 window.onload = function(){
 
-    const botonEnviar = document.getElementById('enviar');
-    botonEnviar.addEventListener('click', function(e){
-        e.preventDefault();
-        mostrar();
-    });
+    const boton = document.getElementById('btn');
+    boton.addEventListener('click', listar);
 }
 
-function mostrar() {
+function listar() {
 
-    let campos = document.getElementsByName("menu");
+    let lista = document.getElementById('flores');
+    let res = document.getElementById('resultado');
 
-    campos.forEach(function(v){
-        if (v.checked){
-            alert("Elegiste: " + v.value);
-        }
+    let items = lista.getElementsByClassName("item");
+
+    items = Array.from(items);
+
+    items.sort(function(a, b){
+        return (a.innerText > b.innerText) ? 1 : -1;
     });
+
+    let txt = '';
+
+    for (let item of items){
+        txt += item.innerText + "<br>";
+    }
+
+    res.innerHTML = txt;
 }
