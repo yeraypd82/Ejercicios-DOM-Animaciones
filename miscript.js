@@ -1,18 +1,13 @@
 window.onload = function(){
-    cargarImagen();
+    let enlace = document.getElementById("borrar");
+
+    enlace.onclick = function(e){
+        e.preventDefault();
+        borrarImagen("muestra");
+    }
 }
 
-function cargarImagen(){
-
-    let destino = document.getElementById("imagen");
-
-    if (!destino){
-        alert("No existe el bloque destino");
-    } else {
-        let nodoImg = document.createElement("img");
-        nodoImg.setAttribute("src", "img/programa.jpg");
-        nodoImg.setAttribute("width", "200");
-
-        destino.appendChild(nodoImg);
-    }
+function borrarImagen(id){
+    let nodo = document.getElementById(id);
+    nodo.remove();
 }
