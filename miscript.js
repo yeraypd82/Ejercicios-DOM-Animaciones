@@ -1,27 +1,14 @@
 window.onload = function(){
 
     const boton = document.getElementById('btn');
-    boton.addEventListener('click', listar);
+    boton.addEventListener('click', colorear);
 }
 
-function listar() {
+function colorear() {
 
-    let lista = document.getElementById('flores');
-    let res = document.getElementById('resultado');
+    var cabs = document.querySelectorAll("h2, h3");
 
-    let items = lista.getElementsByClassName("item");
-
-    items = Array.from(items);
-
-    items.sort(function(a, b){
-        return (a.innerText > b.innerText) ? 1 : -1;
+    cabs.forEach(function(v){
+        v.style.color = "red";
     });
-
-    let txt = '';
-
-    for (let item of items){
-        txt += item.innerText + "<br>";
-    }
-
-    res.innerHTML = txt;
 }
