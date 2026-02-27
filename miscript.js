@@ -1,15 +1,19 @@
 window.onload = function(){
 
-    const botonCopiar = document.getElementById('copiar');
-    botonCopiar.addEventListener('click', fCopiar);
+    const botonEnviar = document.getElementById('enviar');
+    botonEnviar.addEventListener('click', function(e){
+        e.preventDefault();
+        mostrar();
+    });
 }
 
-function fCopiar() {
+function mostrar() {
 
-    let textoParaCopiar =
-        document.querySelector(".texto").textContent;
+    let campos = document.getElementsByName("menu");
 
-    let destino = document.querySelector("p");
-
-    destino.textContent = textoParaCopiar;
+    campos.forEach(function(v){
+        if (v.checked){
+            alert("Elegiste: " + v.value);
+        }
+    });
 }

@@ -2,24 +2,21 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Selector CSS</title>
+    <title>Elementos por Name</title>
     <script src="js/miscript.js"></script>
 </head>
 <body>
 
-    <div class="texto">
-        Contenido que se va a copiar al primer párrafo del documento
-    </div>
+    <form id="formulario">
 
-    <div class="texto">
-        Este contenido no se va a copiar.
-    </div>
+        <input type="radio" name="menu" value="Verdura"> Verduras
+        <input type="radio" name="menu" value="Pescado"> Pescado
+        <input type="radio" name="menu" value="Carne"> Carne
 
-    <p></p>
+        <br><br>
+        <button id="enviar">Elegir</button>
 
-    <p>
-        <button id="copiar">Copiar</button>
-    </p>
+    </form>
 
 </body>
 </html>
