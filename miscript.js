@@ -1,13 +1,19 @@
 window.onload = function(){
-    let enlace = document.getElementById("borrar");
 
-    enlace.onclick = function(e){
-        e.preventDefault();
-        borrarImagen("muestra");
-    }
-}
+    const destino = document.getElementById('destino');
+    const botonRojo = document.getElementById('rojo');
+    const botonAzul = document.getElementById('azul');
+    const botonReset = document.getElementById('reset');
 
-function borrarImagen(id){
-    let nodo = document.getElementById(id);
-    nodo.remove();
+    botonRojo.addEventListener('click', function(){
+        destino.style.backgroundColor = 'red';
+    });
+
+    botonAzul.addEventListener('click', function(){
+        destino.style.backgroundColor = 'blue';
+    });
+
+    botonReset.addEventListener('click', function(){
+        destino.style.backgroundColor = '';
+    });
 }
